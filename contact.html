@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaTech | Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Nova<span>Tech</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main class="content-page">
+    <p class="eyebrow">LET'S TALK</p>
+    <h1>Contact <span>NovaTech.</span></h1>
+    <p class="lead">This demo form is front-end only. It does not send messages to a server.</p>
+    <div class="contact-layout">
+      <section class="contact-details">
+        <h2>Get in touch</h2>
+        <p><strong>Email</strong><br>hello@novatech.example</p>
+        <p><strong>Phone</strong><br>+91 98765 43210</p>
+        <p><strong>Office</strong><br>123 Web Street<br>Bengaluru, India</p>
+      </section>
+      <form id="contact-form">
+        <label for="name">Your name</label>
+        <input id="name" name="name" placeholder="Enter your name" required>
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="How can we help?" required></textarea>
+        <button class="button" type="submit">Send message</button>
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+  <footer>© 2026 NovaTech. A sample project for learning Git.</footer>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      document.getElementById('form-message').textContent =
+        'Thanks! This demo form is working locally, but it is not connected to a mail service.';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
